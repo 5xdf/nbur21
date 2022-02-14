@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<script>
+	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini|Mobile|Internet Explorer/i.test(navigator.userAgent)) {
+    location.href = '/browsernotsupported.html';
+}
+
+</script>
+<title>PerplexDemon Website - Home</title>
+
+<head>
+	<center>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			body {
+				margin: 0;
+				font-family: Google Sans, Helvetica, sans-serif;
+			}
+
+			.topnav {
+				overflow: hidden;
+				background-color: #56b8ab;
+			}
+
+			.topnav a {
+				float: left;
+				color: #004ca8;
+				text-align: center;
+				padding: 14px 16px;
+				text-decoration: none;
+				font-size: 17px;
+			}
+
+			.topnav a:hover {
+				background-color: #ffffff;
+				color: black;
+			}
+
+			.topnav a.active {
+				background-color: #8a8a8a;
+				color: white;
+			}
+		</style>
+</head>
+<noscript>
+	<meta http-equiv="refresh" content="browsernotsupported.html">
+</noscript>
+
+<body onload="typeWriter()">
+
+	<div class="topnav">
+		<a class="active" href="index.html">About</a>
+		<a href="links.html">Links</a>
+		<a href="channels2.html">Secondary Channels</a>
+		<a href="#about">Feedback (WIP)</a>
+	</div>
+
+	<div>
+		<h1 id="demo"></h1>
+		<p id="anotherone"></p>
+		<h3 style="color:blue" id="end">
+			</p>
+
+
+			<script>
+				var i = 0;
+		var txt = "About me";
+		var txtt = "I am PerplexDemon (plex), I am a YouTuber. My channel has been around since 2016, but I started to upload in 2019, even though it doesn't look like I uploaded before 2021. My channel name used to be nbur21, then I changed it to itznbur21, and now it is PerplexDemon. I also have a Live Streaming channel, that is in the Secondary Channels tab. If you want to learn more you will have to come back later, I have barely any time to change anything or upload anything on my channel.";
+		var ending = "--plex--"
+		var speed = 200;
+		
+		function typeWriter() {
+		  if (i < txt.length) {
+		    document.getElementById("demo").innerHTML += txt.charAt(i);
+		    i++;
+		    setTimeout(typeWriter, speed);
+		  }
+		  
+		}
+		setTimeout(typeWriter2, 1000);
+		var ii = 0;
+		var mainspeed = 0
+		function typeWriter2() {
+			
+		  if (ii < txtt.length) {
+		    document.getElementById("anotherone").innerHTML += txtt.charAt(ii);
+		    ii++;
+		    setTimeout(typeWriter2, mainspeed);
+		  }
+		}
+		setTimeout(typeWriter3, 3000);
+		var iii = 0;
+		var signspeed = 100;
+		function typeWriter3() {
+			
+		  if (iii < ending.length) {
+		    document.getElementById("end").innerHTML += ending.charAt(iii);
+		    iii++;
+		    setTimeout(typeWriter3, signspeed);
+		  }
+		}
+			</script>
+	</div>
+	</center>
+</body>
+
+</html>
