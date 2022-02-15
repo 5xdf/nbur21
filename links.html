@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <title>PerplexYT - Links</title>
-<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+<link rel="icon" type="image/x-icon" href="/channel.jpg">
+
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 	body {
 				margin: 0;
-				font-family: Google Sans, Helvetica, sans-serif;
+				font-family: Google Sans, Google Sans, Google Sans;
 				background-color: rgb(71, 71, 71);
 			}
 
@@ -85,11 +86,105 @@
   <a href="#about">Feedback (WIP)</a>
 </div>
 <center>
-<div style="padding-left:16px padding-right:16px">
+<div id="" style="padding-left:16px padding-right:16px">
   <h1 style="color:white">LINKS</h1>
-  <button class = "button button1" >Subscribe</button>
-  <button class = "button button1" >Live Streaming</button>
+  <div id="notification-area">
 </div>
+  <button class = "button button1" onclick="notifyError()" >Subscribe</button>
+  <button class = "button button1" onclick="openGoogle()"  >Live Streaming</button>
+</div>
+<script>
+<div id="notification-area">
+</div>
+
+</script>
 </center>
+<style>
+#notification-area {
+	position:fixed;
+	top:0px;
+	right:10px;
+	width:250px;
+	height:100vh;
+	display:flex;
+	flex-direction:column;
+	justify-content:flex-end;
+}
+#notification-area .notification {
+	padding:15px 10px;
+	background:#111;
+	color:#f5f5f5;
+	font-family:"Google Sans";
+	font-size:14px;
+	font-weight:5px;
+	border-radius:5px;
+	margin:5px 0px;
+	opacity:0;
+	margin-left:20px;
+	animation:showNotification 5s ease-in-out forwards;
+}
+@keyframes showNotification {
+0%	{opacity:0; margin-left:100px;}
+5% {opacity:1; margin-left:0px;}
+95% {opacity:1; margin-left:0px;}
+100% {opacity:0; margin-left:100px;}
+	
+}
+#notification-area .notification.success {
+	background:#389838;
+}
+#notification-area .notification.error {
+	background:orangered;
+}
+#notification-area .notification.info {
+	background:#00acee;
+}
+</style>
+<script>
+	function notify(type,message){
+		(()=>{
+		let n = document.createElement("div");
+		let id = Math.random().toString(36).substr(2,10);
+		n.setAttribute("id",id)
+		n.classList.add("notification",type);
+		n.innerText = message;
+		document.getElementById("notification-area").appendChild(n);
+		setTimeout(()=>{
+			var notifications = document.getElementById("notification-area").getElementsByClassName("notification");
+			for(let i=0;1<notifications.length;i++){
+				if(notifications[i].getAttribute("id")== id)
+            {				
+				notifications[i].remove();
+				break;
+		
+			}
+		}
+	},6000);
+})();
+}
+function notifySuccess() {
+	notify("success","")
+}
+function notifyError() {
+	notify("error","Error 404, page not found.")
+}
+function notifyInfo() {
+	notify("info","Opening external page...")
+}
+function notifyInfo2() {
+notify("info","Page launched in custom browser")
+}
+function openGoogle() {
+	notifyInfo();
+    setTimeout(openGoogle2,3000);
+}
+function openGoogle2() {
+	notifyInfo2()
+	window.open('https://www.youtube.com/channel/UC3D3SrIg4C-nrHIpKgo5aFQ', '_blank', 'location=yes');
+}
+function openYh() {
+	window.open('functionwip.html', '_blank', 'location=no');
+}
+</script>
 </body>
 </html>
