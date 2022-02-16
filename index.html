@@ -1,112 +1,53 @@
 <!DOCTYPE html>
+<title>404 Page not found</title>
+<style>
+	body {
+		font-family: "Google Sans";
+	}
+
+	.animate-bottom {
+		position: relative;
+		-webkit-animation-name: animatebottom;
+		-webkit-animation-duration: 1s;
+		animation-name: animatebottom;
+		animation-duration: 1s
+	}
+
+	@-webkit-keyframes animatebottom {
+		from {
+			bottom: -100px;
+			opacity: 0
+		}
+		to {
+			bottom: 0px;
+			opacity: 1
+		}
+	}
+
+	@keyframes animatebottom {
+		from {
+			bottom: -100px;
+			opacity: 0
+		}
+		to {
+			bottom: 0;
+			opacity: 1
+		}
+	}
+
+	#myDiv {
+		display: block;
+		text-align: center;
+	}
+</style>
 <html>
-<script>
-	if (/Android|webOS|iPhone|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini|Mobile|Internet Explorer|Microsoft Edge/i.test(navigator.userAgent)) {
-    location.href = '/browsernotsupported.html';
-}
 
-</script>
-<title>PerplexDemon Website - Home</title>
-<link rel="icon" type="image/x-icon" href="/channel.png">
-<head>
-	<center>
-
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<style>
-			
-			body {
-				margin: 0;
-				font-family: Google Sans, Helvetica, sans-serif;
-				background-color: rgb(71, 71, 71);
-			}
-
-			.topnav {
-				overflow: hidden;
-				background-color: #000000;
-			}
-
-			.topnav a {
-				float: left;
-				color: #ffffff;
-				text-align: center;
-				padding: 14px 16px;
-				text-decoration: none;
-				font-size: 17px;
-			}
-
-			.topnav a:hover {
-				background-color: #ffffff;
-				color: rgb(131, 131, 131);
-			}
-
-			.topnav a.active {
-				background-color: #8a8a8a;
-				color: white;
-			}
-		
-		</style>
-</head>
-<noscript>
-	<meta http-equiv="refresh" content="browsernotsupported.html">
-</noscript>
-
-<body onload="typeWriter()">
-
-	<div class="topnav">
-		<a class="active" href="index.html">About</a>
-		<a href="links.html">Links</a>
-		<a href="channels2.html">Website Changelog</a>
-		<a href="#about">Feedback (WIP)</a>
-		<a href="test.html">Notification testing!</a>
-	</div>
-
-	<div>
-		<h1 id="demo" style="color:white"></h1>
-		<p id="anotherone" style="color:white"></p>
-		<h3 style="color:white" id="end">
-			</p>
-
-
-			<script>
-				var i = 0;
-		var txt = "About me";
-		var txtt = "I am PerplexDemon (plex), I am a YouTuber. My channel has been around since 2016, but I started to upload in 2019, even though it doesn't look like I uploaded before 2021. My channel name used to be nbur21, then I changed it to itznbur21, and now it is PerplexDemon. I also have a Live Streaming channel, that is in the Secondary Channels tab. If you want to learn more you will have to come back later, I have barely any time to change anything or upload anything on my channel.";
-		var ending = "--plex--"
-		var speed = 200;
-		
-		function typeWriter() {
-		  if (i < txt.length) {
-		    document.getElementById("demo").innerHTML += txt.charAt(i);
-		    i++;
-		    setTimeout(typeWriter, speed);
-		  }
-		  
-		}
-		setTimeout(typeWriter2, 1000);
-		var ii = 0;
-		var mainspeed = 0
-		function typeWriter2() {
-			
-		  if (ii < txtt.length) {
-		    document.getElementById("anotherone").innerHTML += txtt.charAt(ii);
-		    ii++;
-		    setTimeout(typeWriter2, mainspeed);
-		  }
-		}
-		setTimeout(typeWriter3, 3000);
-		var iii = 0;
-		var signspeed = 100;
-		function typeWriter3() {
-			
-		  if (iii < ending.length) {
-		    document.getElementById("end").innerHTML += ending.charAt(iii);
-		    iii++;
-		    setTimeout(typeWriter3, signspeed);
-		  }
-		}
-			</script>
-	</div>
-	</center>
+<body>
+		<div id="myDiv" class "animate-bottom">
+			<h1>The requested page was not found on this server</h1>
+			<p>Please screenshot this error and send it to the owner</p>
+			<h6>HTML 404 PAGE NOT FOUND</h6>
+		</div>
 </body>
 
 </html>

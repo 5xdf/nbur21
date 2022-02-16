@@ -21,12 +21,12 @@
 
 @-webkit-keyframes spin {
   0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(7020deg); }
+  100% { -webkit-transform: rotate(360deg); }
 }
 
 @keyframes spin {
   0% { transform: rotate(0deg); }
-  100% { transform: rotate(7020deg); }
+  100% { transform: rotate(360deg); }
 }
 
 /* Add animation to "page content" */
@@ -35,7 +35,7 @@
   -webkit-animation-name: animatebottom;
   -webkit-animation-duration: 1s;
   animation-name: animatebottom;
-  animation-duration: 10s
+  animation-duration: 1s
 }
 
 @-webkit-keyframes animatebottom {
@@ -59,7 +59,7 @@
 <div id="loader"></div>
 
 <div style="display:none;" id="myDiv" class="animate-bottom">
-  <h2>This function is a work in progress, please try again later.</h2> 
+  <h2 style="color:red">no</h2> 
 </div>
 
 <script>
