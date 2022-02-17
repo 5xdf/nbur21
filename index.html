@@ -1,20 +1,79 @@
 <!DOCTYPE html>
-<title>404 Page not found</title>
+<title>Website Revamp</title>
+<body id="bodyaa">
+	<center>
+		<div id="myDiv" class="style textbg">
+			<h1 id="text1" style="font-size:2.5vw" class="text">Website revamp in progress</h1>
+			<p id="text2" style="font-size:2vw;">For updates go to our <a href="https://perplexdemononline.freshstatus.io/">Status Page</a></p>
+			<br>
+		</div>
+		</center>
+</body>
 <link rel="icon" type="image/x-icon" href="https://previews.dropbox.com/p/thumb/ABfIB2OoT6-UuRQ3dGkICJUFgSGRhIOJJ0VOc5ugGfvd-FnwE1LnflggJWNFsH2EBVLTr7b_AOdJQ_-0E59ypf-RR9f-8WKq7xBRaYqi1eBaqj0C4C81FxySRBt4UGKljlqKuWKFhqU-qxIctkSY2gmrupiMOXbvwCRiAAulp1JQFS51ZscUvR-evkbtRQlzkQ_fPm4Q142boGUoB-OnPPszs0LTwLTj0HB6hzZXtIvNEF8v23_nXwcdZaOv8fLOe-zOa0hqzWZs2OOcC6-3U1v_JN-5SOcEwIcuSstpGPI-rupXafxQxMf-CwIu0m5sDPCak_R5c2KJL14DB1zncjn3FMMegIz8JCZIMOYvD4g-Yw/p.png">
 <style>
+	@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
 body{
-	font-family:"Google Sans";
+	font-family:"Google Sans",Space Mono;
+	background-color:rgb(50,50,50);
+	 animation-name: fade;
+ 	 animation-duration: 2s;
 }
-<html>
+@keyframes fade{
+	from {background-color:rgb(0,0,0)}
+	to {background-color:rgb(50,50,50)}
+}
+.style {
+	position: absolute;
+	text-align:center;
+	padding:10px;
+	animation-name: in;
+	animation-duration: 1s ;
+		background-color:lightblue;
+	border-radius:10px;
+	width: 50%;
+	margin: 0 auto;
+	 transform: translate(-50%, -50%);
+	top:50%;
+	left:50%;
+}
+@keyframes in{
+	0% {opacity:0; top:30%}
+	30% {opacity:1; top:60%;}
+	100% {}
+}
+#style .textbg {
+		background-color:lightblue;
+	border-radius:10px;
+}
+.text {
+	left:50%;
+	background-color:rgb(0,100,100);
+	color:white;
+	border-radius:3px;
+
+}
+#myDiv{
+	display: none;
+}
+#bodyaa{
+	display: black;
+}
 </style>
-<body>
-		<div id="myDiv" class "animate-bottom">
-		<center>
-			<h1>Sceduled maintenance in progress</h1>
-			<p>Please screenshot this error and send it to the owner or go to the <a href="https://perplexdemononline.freshstatus.io/">Status Page</a></p>
-			<h6>HTML [unkown]</h6>
-			</center>
-		</div>
-</body>
+<script>
+var myVar;
+
+  myVar = setTimeout(showPage, 1000);
+
+function showPage() {
+	document.getElementById("bodyaa").style.display = "block";
+	setTimeout(showPage2(),500)
+  
+}
+function showPage2() {
+	document.getElementById("myDiv").style.display = "block";
+}
+</script>
+
 
 </html>
