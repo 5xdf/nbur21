@@ -1,79 +1,118 @@
 <!DOCTYPE html>
-<title>Website Revamp</title>
-<body id="bodyaa">
-	<center>
-		<div id="myDiv" class="style textbg">
-			<h1 id="text1" style="font-size:2.5vw" class="text">Website revamp in progress</h1>
-			<p id="text2" style="font-size:2vw;">For updates go to our <a href="https://perplexdemononline.freshstatus.io/">Status Page</a></p>
-			<br>
-		</div>
-		</center>
-</body>
-<link rel="icon" type="image/x-icon" href="https://previews.dropbox.com/p/thumb/ABfIB2OoT6-UuRQ3dGkICJUFgSGRhIOJJ0VOc5ugGfvd-FnwE1LnflggJWNFsH2EBVLTr7b_AOdJQ_-0E59ypf-RR9f-8WKq7xBRaYqi1eBaqj0C4C81FxySRBt4UGKljlqKuWKFhqU-qxIctkSY2gmrupiMOXbvwCRiAAulp1JQFS51ZscUvR-evkbtRQlzkQ_fPm4Q142boGUoB-OnPPszs0LTwLTj0HB6hzZXtIvNEF8v23_nXwcdZaOv8fLOe-zOa0hqzWZs2OOcC6-3U1v_JN-5SOcEwIcuSstpGPI-rupXafxQxMf-CwIu0m5sDPCak_R5c2KJL14DB1zncjn3FMMegIz8JCZIMOYvD4g-Yw/p.png">
-<style>
-	@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
-
-body{
-	font-family:"Google Sans",Space Mono;
-	background-color:rgb(50,50,50);
-	 animation-name: fade;
- 	 animation-duration: 2s;
-}
-@keyframes fade{
-	from {background-color:rgb(0,0,0)}
-	to {background-color:rgb(50,50,50)}
-}
-.style {
-	position: absolute;
-	text-align:center;
-	padding:10px;
-	animation-name: in;
-	animation-duration: 1s ;
-		background-color:lightblue;
-	border-radius:10px;
-	width: 50%;
-	margin: 0 auto;
-	 transform: translate(-50%, -50%);
-	top:50%;
-	left:50%;
-}
-@keyframes in{
-	0% {opacity:0; top:30%}
-	30% {opacity:1; top:60%;}
-	100% {}
-}
-#style .textbg {
-		background-color:lightblue;
-	border-radius:10px;
-}
-.text {
-	left:50%;
-	background-color:rgb(0,100,100);
-	color:white;
-	border-radius:3px;
-
-}
-#myDiv{
-	display: none;
-}
-#bodyaa{
-	display: black;
-}
-</style>
+<html>
 <script>
-var myVar;
-
-  myVar = setTimeout(showPage, 1000);
-
-function showPage() {
-	document.getElementById("bodyaa").style.display = "block";
-	setTimeout(showPage2(),500)
-  
+	if (/Android|webOS|iPhone|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini|Mobile|Internet Explorer|Microsoft Edge/i.test(navigator.userAgent)) {
+    location.href = '/browsernotsupported.html';
 }
-function showPage2() {
-	document.getElementById("myDiv").style.display = "block";
+
+</script>
+<title>PerplexDemon Online - Home</title>
+<link rel="icon" type="image/x-icon" href="https://previews.dropbox.com/p/thumb/ABc8abHgjWqQRIiW35xjBogq01heRBh6c8tnm0xPM4P7EFOayam5qo3yHnuBgvKRiiX3DR6QktIoX7poWS4QLPQm4ANfCLfJAmHI6OqTJbMXY1U-XoZ8xAIMl3ojv6DIkgWtTe_nS2pys6fhO6lKV3o_FWssldWUVQWIuHHEfPBS9spFUUxXGdru7LSfYneuaxBKkUPtzU05mrPq5RL6kOSbzQ55YHmFEUQu85fWe2c4lSVyyiNRvIVHFJSu1DcZhrBbaBP8xhcvTyvrirWaOe7ngb6SNSefCi57OId9EBQ7tGoR1wUyrnxvWUqQXjvOx1_KhBdhs_a9QoXp1syL_wpLKdJMgxEjwFNLKnPC4Fqn3g/p.png">
+<head>
+	<center>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			
+			body {
+				margin: 0;
+				font-family: Google Sans, Helvetica, sans-serif;
+				background-color: rgb(71, 71, 71);
+			}
+
+			.topnav {
+				overflow: hidden;
+				background-color: #000000;
+			}
+
+			.topnav a {
+				float: left;
+				color: #ffffff;
+				text-align: center;
+				padding: 14px 16px;
+				text-decoration: none;
+				font-size: 17px;
+				transition: 0.3s;
+			}
+
+			.topnav a:hover {
+				background-color: #ffffff;
+				color: rgb(131, 131, 131);
+			}
+
+			.topnav a.active {
+				background-color: #8a8a8a;
+				color: white;
+			}
+		
+		</style>
+</head>
+<noscript>
+	<meta http-equiv="refresh" content="browsernotsupported.html">
+</noscript>
+
+<body onload="typeWriter()">
+
+	<div class="topnav">
+		<a class="active" href="index.html">About</a>
+		<a href="links.html">Links</a>
+		<a href="channels2.html">Website Changelog</a>
+		<a href="#about">Feedback (WIP)</a>
+		<a href="test.html"></a>
+	</div>
+
+	<div style="padding-left:30px padding-right:30px">
+		<h1 id="demo" style="color:white"></h1>
+		<p id="anotherone" style="color:white"></p>
+		<h3 style="color:white" id="end">
+			</p>
+
+
+			<script>
+				var i = 0;
+		var txt = "Welcome!";
+		var txtt = "------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------";
+		var ending = "This website is made from scratch by PerplexDemon, here you can see my channels, tutorials(wip), and you can also message me(wip). Enjoy the website while it lasts, it will be soon upgraded to a much much better website. A website that has problably 1000000000 lines of code (because im taking a coding class)"
+		var speed = 100;
+		
+		function typeWriter() {
+		  if (i < txt.length) {
+		    document.getElementById("demo").innerHTML += txt.charAt(i);
+		    i++;
+		    setTimeout(typeWriter, speed);
+		  }
+		  
+		}
+		setTimeout(typeWriter2, 1000);
+		var ii = 0;
+		var mainspeed = 10;
+		function typeWriter2() {
+			
+		  if (ii < txtt.length) {
+		    document.getElementById("anotherone").innerHTML += txtt.charAt(ii);
+		    ii++;
+		    setTimeout(typeWriter2, mainspeed);
+		  }
+		}
+		setTimeout(typeWriter3, 2000);
+		var iii = 0;
+		var signspeed = 10;
+		function typeWriter3() {
+			
+		  if (iii < ending.length) {
+		    document.getElementById("end").innerHTML += ending.charAt(iii);
+		    iii++;
+		    setTimeout(typeWriter3, signspeed);
+		  }
+		}
+			</script>
+	</div>
+	</center>
+</body>
+<script>
+setTimeout(howAboutNo,100);
+function howAboutNo() {
+	window.location = "/Error.html"
 }
 </script>
-
-
 </html>
