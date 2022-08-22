@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<script>
+	if (/Android|webOS|iPhone|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini|Mobile|Internet Explorer|Microsoft Edge/i.test(navigator.userAgent)) {
+    location.href = '/browsernotsupported.html';
+}
+
+</script>
+<title>PerplexDemon Hub - Home</title>
+<link rel="icon" type="image/x-icon" href="https://previews.dropbox.com/p/thumb/ABc8abHgjWqQRIiW35xjBogq01heRBh6c8tnm0xPM4P7EFOayam5qo3yHnuBgvKRiiX3DR6QktIoX7poWS4QLPQm4ANfCLfJAmHI6OqTJbMXY1U-XoZ8xAIMl3ojv6DIkgWtTe_nS2pys6fhO6lKV3o_FWssldWUVQWIuHHEfPBS9spFUUxXGdru7LSfYneuaxBKkUPtzU05mrPq5RL6kOSbzQ55YHmFEUQu85fWe2c4lSVyyiNRvIVHFJSu1DcZhrBbaBP8xhcvTyvrirWaOe7ngb6SNSefCi57OId9EBQ7tGoR1wUyrnxvWUqQXjvOx1_KhBdhs_a9QoXp1syL_wpLKdJMgxEjwFNLKnPC4Fqn3g/p.png">
+<head>
+	<center>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			
+			body {
+				margin: 0;
+				font-family: Google Sans, Helvetica, sans-serif;
+				background-color: rgb(71, 71, 71);
+			}
+
+			.topnav {
+				overflow: hidden;
+				background-color: #000000;
+			}
+
+			.topnav a {
+				float: left;
+				color: #ffffff;
+				text-align: center;
+				padding: 14px 16px;
+				text-decoration: none;
+				font-size: 17px;
+				transition: 0.3s;
+			}
+
+			.topnav a:hover {
+				background-color: #ffffff;
+				color: rgb(131, 131, 131);
+			}
+
+			.topnav a.active {
+				background-color: #8a8a8a;
+				color: white;
+			}
+		
+		</style>
+</head>
+<noscript>
+	<meta http-equiv="refresh" content="browsernotsupported.html">
+</noscript>
+
+<body onload="typeWriter()">
+
+	<div class="topnav">
+		<a class="active" href="index.html">About</a>
+		<a href="links.html">Links</a>
+		<a href="channels2.html">Website Changelog</a>
+		<a href="#about">Feedback (WIP)</a>
+		<a href="test.html"></a>
+	</div>
+
+	<div style="padding-left:30px; padding-right:30px">
+		<h1 id="demo" style="color:white"></h1>
+		<p id="anotherone" style="color:white"></p>
+		<h3 style="color:white" id="end"></p>
+
+
+			<script>
+				var i = 0;
+		var txt = "PerplexDemon Hub";
+		var txtt = "Hello. Welcome to my website. This website is currently in beta, do expect features to be missing. I am new to JavaScript and HTML. I do know some of the basics. I am currently taking a HTML/JavaScript class in school. This website will be upgraded once I get through the class. Thanks for stopping by! Also I forgot to mention, w3schools helped me learn about HTML and JavaScript. Mostly tweeing.";
+		var ending = "-- This website was made by PerplexDemon. Coded on Github/Replit. Some code from w3schools was used. --"
+		var speed = 100;
+		
+		function typeWriter() {
+		  if (i < txt.length) {
+		    document.getElementById("demo").innerHTML += txt.charAt(i);
+		    i++;
+		    setTimeout(typeWriter, speed);
+		  }
+		  
+		}
+		setTimeout(typeWriter2, 1000);
+		var ii = 0;
+		var mainspeed = 1;
+		function typeWriter2() {
+			
+		  if (ii < txtt.length) {
+		    document.getElementById("anotherone").innerHTML += txtt.charAt(ii);
+		    ii++;
+		    setTimeout(typeWriter2, mainspeed);
+		  }
+		}
+		setTimeout(typeWriter3, 2000);
+		var iii = 0;
+		var signspeed = 10;
+		function typeWriter3() {
+			
+		  if (iii < ending.length) {
+		    document.getElementById("end").innerHTML += ending.charAt(iii);
+		    iii++;
+		    setTimeout(typeWriter3, signspeed);
+		  }
+		}
+			</script>
+	</div>
+	</center>
+</body>
+<!--><script>
+setTimeout(howAboutNaaaaaaaaaaaaaaaaaaaaaaaaa,100);
+function howAboutNo() {
+	window.location = "/Error.html"
+}
+</script>
+</!-->
+</html>
