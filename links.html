@@ -85,16 +85,18 @@
 		<a href="index.html">About</a>
 		<a class="active" href="links.html">Links</a>
 		<a href="channels2.html">Website Changelog</a>
-		<a href="#about">Feedback (WIP)</a>
+		<a style="color:yellow" href="#about">v1</a>
 	</div>
 	<center>
 		<div id="" style="padding-left:16px padding-right:16px">
 			<h1 style="color:white">LINKS</h1>
 			<div id="notification-area">
 			</div>
-			<button class = "button button1" onclick="notifyError()" >Subscribe</button>
+			<button class = "button button1" onclick="open()" >Subscribe</button>
+			<br>
   <button class = "button button1" onclick="openGoogle()"  >Live Streaming</button>
-  <button class = "button button1" onclick="openYh()" >Panzoid</button>
+  <br>
+			<button class = "button button1" onclick="openYh()" >Panzoid</button>
   <br>
   <button class = "button button1" onclick="openYh()" >PZ Youtube</button>
   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -112,7 +114,7 @@
 	position:fixed;
 	top:0px;
 	right:10px;
-	width:250px;
+	width:2px;
 	height:100vh;
 	display:flex;
 	flex-direction:column;
@@ -132,10 +134,10 @@
 	animation:showNotification 6s ease-in-out forwards;
 }
 @keyframes showNotification {
-0%	{opacity:0; margin-left:20px;}
-5% {opacity:1; margin-left:0px;}
-95% {opacity:1; margin-left:0px;}
-100% {opacity:0; margin-left:20px;}
+0%	{opacity:0; margin-left:-500px;}
+5% {opacity:1; margin-left:-200px;}
+95% {opacity:1; margin-left:-200px;}
+100% {opacity:0; margin-left:200px;}
 	
 }
 #notification-area .notification.success {
@@ -182,12 +184,20 @@ function notifyInfo() {
 function notifyInfo2() {
 notify("info","Page launched in custom browser")
 }
+function open() {
+	notifyInfo();
+	setTimeout(openGooglee,3000);
+}
+function openGooglee() {
+	notifyInfo2();
+	window.open('https://www.youtube.com/channel/UCMjHYtmKgINBUNmTtoTqAkQ', '_blank', 'location=yes');
+}
 function openGoogle() {
 	notifyInfo();
     setTimeout(openGoogle2,3000);
 }
 function openGoogle2() {
-	notifyInfo2()
+	notifyInfo2();
 	window.open('https://www.youtube.com/channel/UC3D3SrIg4C-nrHIpKgo5aFQ', '_blank', 'location=yes');
 }
 function openYh() {
