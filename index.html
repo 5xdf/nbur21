@@ -1,118 +1,81 @@
 <!DOCTYPE html>
-<html>
-<script>
-	if (/Android|webOS|iPhone|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini|Mobile|Internet Explorer|Microsoft Edge/i.test(navigator.userAgent)) {
-    location.href = '/browsernotsupported.html';
-}
-
-</script>
-<title>nbur21 -- About</title>
-<link rel="icon" type="image/x-icon" href="/icon.png">
-<head>
+<title>403 Forbidden</title>
+<body id="bodyaa">
 	<center>
-
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<style>
-			
-			body {
-				margin: 0;
-				font-family: Google Sans, Helvetica, sans-serif;
-				background-color: rgb(71, 71, 71);
-			}
-
-			.topnav {
-				overflow: hidden;
-				background-color: #000000;
-			}
-
-			.topnav a {
-				float: left;
-				color: #ffffff;
-				text-align: center;
-				padding: 14px 16px;
-				text-decoration: none;
-				font-size: 17px;
-				transition: 0.3s;
-			}
-
-			.topnav a:hover {
-				background-color: #ffffff;
-				color: rgb(131, 131, 131);
-			}
-
-			.topnav a.active {
-				background-color: #8a8a8a;
-				color: white;
-			}
-		
-		</style>
-</head>
-<noscript>
-	<meta http-equiv="refresh" content="browsernotsupported.html">
-</noscript>
-
-<body onload="typeWriter()">
-
-	<div class="topnav">
-		<a class="active" href="index.html">About</a>
-		<a href="links.html">Links</a>
-		<a href="channels2.html">Website Changelog</a>
-		<a style="color:yellow" href="#about">v1</a>
-		<a href="test.html"></a>
-	</div>
-
-	<div style="padding-left:30px; padding-right:30px">
-		<h1 id="demo" style="color:yellow"></h1>
-		<p id="anotherone" style="color:red"></p>
-		<h3 style="color:blue" id="end"></p>
-
-
-			<script>
-				var i = 0;
-		var txt = "nbur21";
-		var txtt = "The website has exited beta!! Thank you all for the support! Since the website has exited beta, it will show up on my channel now. Message me at nbur21#8775 if you notice any bugs with the update.";
-		var ending = "-- This website was made by nbur21. Coded on Github/Replit. Some code from w3schools was used. --"
-		var speed = 100;
-		
-		function typeWriter() {
-		  if (i < txt.length) {
-		    document.getElementById("demo").innerHTML += txt.charAt(i);
-		    i++;
-		    setTimeout(typeWriter, speed);
-		  }
-		  
-		}
-		setTimeout(typeWriter2, 1000);
-		var ii = 0;
-		var mainspeed = 1;
-		function typeWriter2() {
-			
-		  if (ii < txtt.length) {
-		    document.getElementById("anotherone").innerHTML += txtt.charAt(ii);
-		    ii++;
-		    setTimeout(typeWriter2, mainspeed);
-		  }
-		}
-		setTimeout(typeWriter3, 2000);
-		var iii = 0;
-		var signspeed = 10;
-		function typeWriter3() {
-			
-		  if (iii < ending.length) {
-		    document.getElementById("end").innerHTML += ending.charAt(iii);
-		    iii++;
-		    setTimeout(typeWriter3, signspeed);
-		  }
-		}
-			</script>
-	</div>
-	</center>
+		<div id="myDiv" class="style textbg">
+			<h1 id="text1" style="font-size:2vw" class="text">403 Forbidden // Site Revamp</h1>
+			<p id="text2" style="font-size:1vw;">You don't have access to this page. <a href="/index.html">home</a></p>
+		</div>
+		</center>
 </body>
-<!--><script>
-setTimeout(howAboutNaaaaaaaaaaaaaaaaaaaaaaaaa,100);
-function howAboutNo() {
-	window.location = "/Error.html"
+<link rel="icon" type="image/x-icon" href="/icon.png">
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+body{
+	font-family:"Google Sans",Space Mono;
+	background-color:rgb(50,50,50);
+	 animation-name: fade;
+ 	 animation-duration: 2s;
+}
+@keyframes fade{
+	from {background-color:rgb(0,0,0)}
+	to {background-color:rgb(50,50,50)}
+}
+.style {
+	position: absolute;
+	text-align:center;
+	padding:0px;
+	animation-name: in;
+	
+	animation-duration: 1s;
+		background-color:lightblue;
+	border-radius:5px;
+	border: 5px black;
+	width: 50%;
+	margin: 0 auto;
+	 transform: translate(-50%, -50%);
+	top:10%;
+	left:50%;
+}
+@keyframes in{
+	0% {opacity:1; top:-10%; border-radius: 50px; orientation: 10px;}
+	100% {opacity:1; top:10%; border-radius: 5px; orientation: 10;}
+}
+#style .textbg {
+		background-color:lightblue;
+	border-radius:10px;
+	opacity: 0;
+}
+.text {
+	left:50%;
+	top:-20%;
+	background-color:rgb(0,100,100);
+	color:white;
+	border-radius:0px;
+
+}
+#myDiv{
+	display: none;
+}
+#bodyaa{
+	display: black;
+}
+</style>
+<script>
+var myVar;
+
+  myVar = setTimeout(showPage, 1000);
+
+function showPage() {
+	document.getElementById("bodyaa").style.display = "block";
+	setTimeout(showPage2(),500)
+  
+}
+function showPage2() {
+	document.getElementById("myDiv").style.display = "block";
 }
 </script>
-</!-->
+
+
 </html>

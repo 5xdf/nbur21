@@ -13,7 +13,7 @@
 		}
 
 		.topnav {
-			overflow: hidden;
+			overflow: visible;
 			background-color: #000000;
 		}
 
@@ -49,9 +49,10 @@
 			text-align: center;
 			text-decoration: none;
 			display: inline-block;
+			border-radius: 100px;
 			font-size: 16px;
 			margin: 1px 1px;
-			transition-duration: 0.1s;
+			transition-duration: 0.5s;
 			cursor: pointer;
 		}
 
@@ -59,13 +60,13 @@
 			background-color: rgb(71, 71, 71);
 			color: rgb(255, 255, 255);
 			border: 5px solid #000000;
+			font-size: 16px;
 		}
 
 		.button1:hover {
 			background-color: red;
 			color: black;
-			border: 5px solid black;
-			padding: 10px 50px
+			padding: 10px 150px
 		}
 
 		.button2 {
@@ -85,23 +86,24 @@
 		<a href="index.html">About</a>
 		<a class="active" href="links.html">Links</a>
 		<a href="channels2.html">Website Changelog</a>
-		<a style="color:yellow" href="#about">v1</a>
+		<a style="color:yellow" href="#about">v1.1</a>
 	</div>
 	<center>
 		<div id="" style="padding-left:16px padding-right:16px">
 			<h1 style="color:white">LINKS</h1>
 			<div id="notification-area">
 			</div>
-			<button class = "button button1" onclick="openLink()" >Subscribe</button>
+			<button class = "button button1" onclick="openGoog2()" >Main Channel</button>
 			<br>
-  <button class = "button button1" onclick="openGoogle()"  >Live Streaming</button>
+  <button class = "button button1" onclick="openGoog()"  >Live Streaming</button>
   <br>
-			<button class = "button button1" onclick="openYh()" >Panzoid</button>
+			<button class = "button button1" onclick="showNotif()" >Panzoid</button>
   <br>
-  <button class = "button button1" onclick="openYh()" >PZ Youtube</button>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <button class = "button button2" >dont hover on me</button>
-
+  <button class = "button button1" onclick="showNotif()" >PZ Youtube</button>
+			 <br>
+  <button class = "button button1" onclick="showNotif()" >Twitch</button>
+ 	<div id="snackbar">Unknown Page</div>
+	<div id="snackbar2">Opening external browser</div>
 </div>
 <script>
 <div id="notification-area">
@@ -110,100 +112,120 @@
 </script>
 </center>
 <style>
-#notification-area {
-	position:fixed;
-	top:0px;
-	right:10px;
-	width:2px;
-	height:100vh;
-	display:flex;
-	flex-direction:column;
-	justify-content:flex-end;
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border: 5px solid rgb(0,0,0);
+  border-radius: 10px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  opacity:0.9;
+  bottom: 30px;
+  font-size: 17px;
 }
-#notification-area .notification {
-	padding:15px 10px;
-	background:#111;
-	color:#f5f5f5;
-	font-family:"Google Sans";
-	font-size:14px;
-	font-weight:5px;
-	border-radius:5px;
-	margin:5px 0px;
-	opacity:0;
-	margin-left:20px;
-	animation:showNotification 6s ease-in-out forwards;
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
-@keyframes showNotification {
-0%	{opacity:0; margin-left:-500px;}
-5% {opacity:1; margin-left:-200px;}
-95% {opacity:1; margin-left:-200px;}
-100% {opacity:0; margin-left:200px;}
-	
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
 }
-#notification-area .notification.success {
-	background:#389838;
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 0.9;}
 }
-#notification-area .notification.error {
-	background:orangered;
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
 }
-#notification-area .notification.info {
-	background:#00acee;
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 0.9;}
+  to {bottom: 0; opacity: 0;}
+}
+</style>
+<style>
+#snackbar2 {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border: 5px solid rgb(0,0,0);
+  border-radius: 10px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  opacity:0.9;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar2.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 0.9;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 0.9;}
+  to {bottom: 0; opacity: 0;}
 }
 </style>
 <script>
-	function notify(type,message){
-		(()=>{
-		let n = document.createElement("div");
-		let id = Math.random().toString(36).substr(2,10);
-		n.setAttribute("id",id)
-		n.classList.add("notification",type);
-		n.innerText = message;
-		document.getElementById("notification-area").appendChild(n);
-		setTimeout(()=>{
-			var notifications = document.getElementById("notification-area").getElementsByClassName("notification");
-			for(let i=0;1<notifications.length;i++){
-				if(notifications[i].getAttribute("id")== id)
-            {				
-				notifications[i].remove();
-				break;
-		
-			}
-		}
-	},6000);
-})();
+function showNotif() {
+  var x = document.getElementById("snackbar");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 }
-function notifySuccess() {
-	notify("success","")
+	function showNotif2() {
+  var x = document.getElementById("snackbar2");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 }
-function notifyError() {
-	notify("error","Error 404, page not found.")
-}
-function notifyInfo() {
-	notify("info","Opening external page...")
-}
-function notifyInfo2() {
-notify("info","Page launched in custom browser")
-}
-function openLink() {
-	notifyInfo();
-	setTimeout(openGooglee,3000);
-}
-function openGooglee() {
-	notifyInfo2();
-	window.open('https://www.youtube.com/channel/UCMjHYtmKgINBUNmTtoTqAkQ', '_blank', 'location=yes');
-}
-function openGoogle() {
-	notifyInfo();
-    setTimeout(openGoogle2,3000);
-}
-function openGoogle2() {
-	notifyInfo2();
-	window.open('https://www.youtube.com/channel/UC3D3SrIg4C-nrHIpKgo5aFQ', '_blank', 'location=yes');
-}
-function openYh() {
-	window.open('functionwip.html', '_blank', 'location=no');
-}
+	function openGoog() {
+		showNotif2()
+		setTimeout(openReal1,2500)
+	}
+	function openGoog2() {
+		showNotif2()
+		setTimeout(openReal2,2500)
+	}
+	function openReal1() {
+		window.open('https://www.youtube.com/channel/UC3D3SrIg4C-nrHIpKgo5aFQ', '_blank', 'location=yes')
+	}
+	function openReal2() {
+		window.open('https://www.youtube.com/channel/UCMjHYtmKgINBUNmTtoTqAkQ', '_blank', 'location=yes')
+	}
 </script>
-
 </body>
 </html>
