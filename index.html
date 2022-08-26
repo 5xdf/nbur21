@@ -1,81 +1,178 @@
 <!DOCTYPE html>
-<title>403 Forbidden</title>
-<body id="bodyaa">
-	<center>
-		<div id="myDiv" class="style textbg">
-			<h1 id="text1" style="font-size:2vw" class="text">403 Forbidden // Site Revamp</h1>
-			<p id="text2" style="font-size:1vw;">You don't have access to this page. <a href="index.html">home</a></p>
-		</div>
-		</center>
-</body>
-<link rel="icon" type="image/x-icon" href="icon.png">
-<style>
-	@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
-
-body{
-	font-family:"Google Sans",Space Mono;
-	background-color:rgb(50,50,50);
-	 animation-name: fade;
- 	 animation-duration: 2s;
-}
-@keyframes fade{
-	from {background-color:rgb(0,0,0)}
-	to {background-color:rgb(50,50,50)}
-}
-.style {
-	position: absolute;
-	text-align:center;
-	padding:0px;
-	animation-name: in;
-	
-	animation-duration: 1s;
-		background-color:lightblue;
-	border-radius:5px;
-	border: 5px black;
-	width: 50%;
-	margin: 0 auto;
-	 transform: translate(-50%, -50%);
-	top:10%;
-	left:50%;
-}
-@keyframes in{
-	0% {opacity:1; top:-10%; border-radius: 50px; orientation: 10px;}
-	100% {opacity:1; top:10%; border-radius: 5px; orientation: 10;}
-}
-#style .textbg {
-		background-color:lightblue;
-	border-radius:10px;
-	opacity: 0;
-}
-.text {
-	left:50%;
-	top:-20%;
-	background-color:rgb(0,100,100);
-	color:white;
-	border-radius:0px;
-
-}
-#myDiv{
-	display: none;
-}
-#bodyaa{
-	display: black;
-}
-</style>
+<html>
 <script>
-var myVar;
-
-  myVar = setTimeout(showPage, 1000);
-
-function showPage() {
-	document.getElementById("bodyaa").style.display = "block";
-	setTimeout(showPage2(),500)
-  
+	if (/Android|webOS|iPhone|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini|Mobile|Internet Explorer|Microsoft Edge/i.test(navigator.userAgent)) {
+    location.href = 'browsernotsupported.html';
 }
-function showPage2() {
-	document.getElementById("myDiv").style.display = "block";
-}
+
 </script>
+<title>nbur21 -- About</title>
+<link rel="icon" type="image/x-icon" href="icon.png">
 
+<head>
+	<center>
 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			
+			body {
+				margin: 0;
+				font-family: Google Sans, Helvetica, sans-serif;
+				background-color: rgb(71, 71, 71);
+			}
+
+			.topnav {
+				overflow: hidden;
+				background-color: #000000;
+			}
+
+			.topnav a {
+				float: left;
+				color: #ffffff;
+				text-align: center;
+				padding: 14px 16px;
+				text-decoration: none;
+				border-radius: 10px;
+				font-size: 17px;
+				transition: 0.3s;
+			}
+
+			.topnav a:hover {
+				background-color: #ffffff;
+				color: rgb(0, 0, 0);
+				transform: scale(1.1,1.1); 
+			}
+			.topnav a:active {
+				transform: scale(0.9,0.9);
+			}
+			.topnav a.active {
+				background-color: #8a8a8a;
+				color: white;
+			}
+		
+		</style>
+</head>
+	<style>
+		.button {
+			border: none;
+			color: rgb(71, 71, 71);
+			padding: 10px 20px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			border-radius: 100px;
+			font-size: 16px;
+			margin: 1px 1px;
+			transition: 0.5s;
+			cursor: pointer;
+		}
+
+		.button1 {
+			background-color: rgb(71, 71, 71);
+			color: rgb(255, 255, 255);
+			border: 5px solid #000000;
+			font-size: 16px;
+		}
+
+		.button1:hover {
+			background-color: cyan;
+			color: black;
+			border: 5px solid rgb(0,255,255);
+			transform: rotate(5deg);
+			padding: 10px 100px;
+			transform: scale(1.1, 1.1);
+		}
+		.button1:active {
+			background-color: black;
+			color: white;
+			transform: rotate(-5deg);
+			
+		}
+		.button2 {
+			background-color: rgb(71, 71, 71);
+			color: black;
+			border: 5px solid #000000;
+		}
+
+		.button2:hover {
+			background-color: black;
+			color: white;
+			border: 5px solid #000000;
+			padding: 1013212312px 701231230px
+		}
+	</style>
+<noscript>
+	<meta http-equiv="refresh" content="browsernotsupported.html">
+</noscript>
+<style>
+	.home {
+		
+	}
+	.home container {
+		background-color: rgb(0,0,0);
+		color: white;
+		padding: 0px 0px;
+	}
+	#theultimatediv {
+		background-color: rgb(0,0,0);
+		color: white;
+		width: 100%;
+		
+		padding: 10px 0px;
+		margin-top: 10px;
+		transition: 0.5s;
+		animation-name: fade;
+ 		animation-duration: 2s
+	}
+	#theultimatediv:hover {
+		background-color: rgb(30,30,30);
+	}
+	#theultimatediv:active {
+		transform: scale(1,0.9);
+		background-color: rgb(255,255,255);
+		color: black;
+	}
+	#thediv {
+			background-color: rgb(71,71,71);
+		color: white;
+		width: 95%;
+		border-radius: 1000px;
+		padding: 10px 0px;
+		transition: 0.3s;
+	}
+	#thediv:hover {
+		background-color: rgb(255,255,255);
+		color: black;
+		transform: scale(1.05,1.05);
+	}
+</style>
+<body>
+
+	<div class="topnav">
+		<a class="active" href="index.html">About</a>
+		<a href="#">Links [CLOSED]</a>
+		<a href="#channels2.html">Website Changelog [CLOSED]</a>
+		<a href="#about">v2 [LIMITED ACCESS]</a>
+		<a href="test.html"></a>
+	</div>
+
+	<div id="theultimatediv" class="home container">
+		<h1>nbur21 // About me</h1>
+	</div>
+	
+	<p id="thediv" style="margin-top:10px">Here is a bit about me:</p>
+	<p id="thediv">I am 13 years old, in high school (about to turn 14). I like to play Roblox, Minecraft, and Geometry Dash. The links to those games can be found in the links section of this site.</p>
+	<p id="thediv">My goal as a developer is to make sure everybody who plays has a good experience.</p>
+	<p id="thediv">If you want to see some of my games, you can also go to the links page to see them.</p>
+	<p id="thediv">Also, this website has 50% JS code in it, you could say I like to use JavaScript, but i don't. It was only used for the CSS coding and for the buttons on the links page. (it was also used some in the 404 and 403 pages of this and in here too)</p>
+	<p id="thediv">In the future I plan on expanding this website beyond links and things about me, for example maybe like.. Requests for certain things? But anyways, I have to get to revamping the other pages. CYA.</p>
+	<p id="thediv">To get to the games I play please use this <a href="gamesthatiplay.html">link</a></p>
+	<h2 id="thediv">--nbur21</h2>
+	<button class="button button1">Administrator Login</button>
+	<br>
+	<button class="button button1">Owner Login</button>
+	<br>
+	<br>
+</center>
+</body>
 </html>
