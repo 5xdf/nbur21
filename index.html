@@ -24,8 +24,13 @@
 			.topnav {
 				overflow: hidden;
 				background-color: #000000;
+				animation-name: in;
+				animation-duration: 1s;
 			}
-
+			@keyframes in {
+				from {margin-left:-1000px;}
+				to {margin-left:0px;}
+			}
 			.topnav a {
 				float: left;
 				color: #ffffff;
@@ -35,6 +40,7 @@
 				border-radius: 10px;
 				font-size: 17px;
 				transition: 0.3s;
+
 			}
 
 			.topnav a:hover {
@@ -64,16 +70,22 @@
 			font-size: 16px;
 			margin: 1px 1px;
 			transition: 0.5s;
+
 			cursor: pointer;
 		}
-
+	
 		.button1 {
 			background-color: rgb(71, 71, 71);
 			color: rgb(255, 255, 255);
 			border: 5px solid #000000;
 			font-size: 16px;
+			animation-name: opacity;
+			animation-duration: 1s;
 		}
-
+	@keyframes opacity {
+			from {opacity:0;}
+			to {opacity:1;}
+		}
 		.button1:hover {
 			background-color: cyan;
 			color: black;
@@ -121,8 +133,7 @@
 		padding: 10px 0px;
 		margin-top: 10px;
 		transition: 0.5s;
-		animation-name: fade;
- 		animation-duration: 2s
+
 	}
 	#theultimatediv:hover {
 		background-color: rgb(30,30,30);
@@ -139,7 +150,9 @@
 		border-radius: 1000px;
 		padding: 10px 0px;
 		transition: 0.3s;
+		
 	}
+
 	#thediv:hover {
 		background-color: rgb(255,255,255);
 		color: black;
