@@ -5,7 +5,7 @@
 
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
+		<style>
 			
 			body {
 				margin: 0;
@@ -16,8 +16,13 @@
 			.topnav {
 				overflow: hidden;
 				background-color: #000000;
+				animation-name: in;
+				animation-duration: 1s;
 			}
-
+			@keyframes in {
+				from {margin-left:-1000px;}
+				to {margin-left:0px;}
+			}
 			.topnav a {
 				float: left;
 				color: #ffffff;
@@ -27,24 +32,31 @@
 				border-radius: 10px;
 				font-size: 17px;
 				transition: 0.3s;
+
 			}
 
 			.topnav a:hover {
-				background-color: #ffffff;
+				background-color: gold;
 				color: rgb(0, 0, 0);
 				transform: scale(1.1,1.1); 
 			}
 			.topnav a:active {
 				transform: scale(0.9,0.9);
+				background-color: black;
+				color: white;
 			}
 			.topnav a.active {
-				background-color: #8a8a8a;
+				background-color: rgb(71,71,71);
+				color: yellow;
+				transition: 0.3s
+			}
+			.topnav a.active:active {
+				transform: scale(0.9,0.9);
+				background-color: black;
 				color: white;
 			}
 		
 		</style>
-
-</head>
 
 <body>
 	<style>
@@ -80,8 +92,7 @@
 		.button1:active {
 			background-color: black;
 			color: white;
-			transform: rotate(-5deg);
-			transform: scale(0.9, 0.9);
+			
 		}
 		.button2 {
 			background-color: rgb(71, 71, 71);
@@ -93,38 +104,78 @@
 			background-color: black;
 			color: white;
 			border: 5px solid #000000;
-			padding: 1013212312px 701231230px
+			padding: 1013212312px 701231230px;
+			
+		}
+	</style>
+	<style>
+		.holder {
+			border-radius: 10px;
+			background-color: rgb(100,100,100);
+			  transition:  0.3s;
+			width: 30%;
+			color: white;
+			margin-top: 30px;
+			padding: 1px 1px 1px 1px;
+		}
+		.holder:hover {
+			transform: scale(1.1,1.1);
+			cursor: pointer;
+			box-shadow: 0px 0px 30px 2px rgba(100,100,100,1);
+		}
+		.holder:active {
+			transform: scale(0.9,0.9);
+			background-color:gold;
+			color:black;
+			box-shadow: 0px 0px 50px 10px gold;
 		}
 	</style>
 	<div class="topnav">
 		<a href="index.html">About</a>
-		<a class="active" href="#links.html">Links [CLOSED]</a>
+		<a class="active" href="links.html">Links</a>
 		<a href="#channels2.html">Website Changelog [CLOSED]</a>
 		<a href="#about">v2 [LIMITED ACCESS]</a>
 	</div>
 	<center>
-		<div id="" style="padding-left:16px padding-right:16px">
-			<h1 style="color:white">LINKS</h1>
-			<div id="notification-area">
-			</div>
-  <button class = "button button1" onclick="openGoog2()" >Main Channel</button>
-  <br>
-  <button class = "button button1" onclick="openGoog()"  >Live Streaming</button>
-  <br>
-  <button class = "button button1" onclick="showNotif()" >Panzoid</button>
-  <br>
-  <button class = "button button1" onclick="showNotif()" >PZ Youtube</button>
-  <br>
-  <button class = "button button1" onclick="showNotif()" >Twitch</button>
+		<h1 style="color:white">Games</h1>
+		<div class="holder" onclick="window.open('https://www.minecraft.net/en-us', '_blank', 'location=no')">
+		<img src='https://play-lh.googleusercontent.com/VSwHQjcAttxsLE47RuS4PqpC4LT7lCoSjE7Hx5AW_yCxtDvcnsHHvm5CTuL5BPN-uRTP=s48-rw' style="border-radius:10px;width:100px;height:100px;margin-top:10px;">
+		<h2>Minecraft</h2>
+			<p>Minecraft is my 1st favorite game. Used to be Roblox. I only say this is my #1 favorite is because of all of the audio updates and the update that removed the oof sound.</p>
+		</div>
+		<div onclick="window.open('https://www.roblox.com/', '_blank', 'location=no')" class="holder">
+			<img src="rblx.jpg" style="border-radius:10px;width:100px;height:100px;margin-top:10px;">
+			<h2 class="element2">Roblox</h2>
+			<p>Roblox is my #2 favorite game. Used to be my #1.</p>
+		</div>
+		<div class="holder" onclick="window.open('https://upload.wikimedia.org/wikipedia/en/3/35/Geometry_Dash_Logo.PNG', '_blank', 'location=no')">
+			<img src="https://upload.wikimedia.org/wikipedia/en/3/35/Geometry_Dash_Logo.PNG" style="border-radius:10px;width:100px;height:100px;margin-top:10px;">
+			<h2>Geometry Dash</h2>
+			<p>Geometry dash is my 3rd favorite game.</p>
+		</div>
+		<h1 style="color:white">Coding Websites</h1>
+		<div class="holder">
+			<h2>repl.it</h2>
+			<p>This website is my go to coding website, i used it to code this website. The UI is very user friendly. (in my opinion)</p>
+		</div>
+		<div class="holder">
+			<h2>GitHub</h2>
+			<p>This is what I used for the main website. I send the changes from replit to GitHub.</p>
+		</div>
+		<div class="holder">
+			<h2>Codepen.io</h2>
+			<p>I used this to test features I wanted to add to this site, most of them didn't work.</p>
+		</div>
+		<br>
+		<br>
  	<div id="snackbar">Unknown Page</div>
 	<div id="snackbar2">Opening external browser</div>
 </div>
 <script>
-<div id="notification-area">
-</div>
 
 </script>
 </center>
+	<script src="https://9b3s1ksy5fcb.statuspage.io/embed/script.js"></script>
 <style>
 #snackbar {
   visibility: hidden;
