@@ -4,8 +4,9 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-	body {
+	<style>
+			
+			body {
 				margin: 0;
 				font-family: Google Sans, Helvetica, sans-serif;
 				background-color: rgb(71, 71, 71);
@@ -14,29 +15,48 @@
 			.topnav {
 				overflow: hidden;
 				background-color: #000000;
+				animation-name: in;
+				animation-duration: 1s;
 			}
-
+			@keyframes in {
+				from {margin-left:-1000px;}
+				to {margin-left:0px;}
+			}
 			.topnav a {
 				float: left;
 				color: #ffffff;
 				text-align: center;
 				padding: 14px 16px;
 				text-decoration: none;
+				border-radius: 10px;
 				font-size: 17px;
-				transition: 0.7s;
+				transition: 0.3s;
+
 			}
 
 			.topnav a:hover {
-				background-color: #ffffff;
-				color: rgb(131, 131, 131);
+				background-color: gold;
+				color: rgb(0, 0, 0);
+				transform: scale(1.1,1.1); 
 			}
-
-			.topnav a.active {
-				background-color: #8a8a8a;
+			.topnav a:active {
+				transform: scale(0.9,0.9);
+				background-color: black;
 				color: white;
 			}
-			
-</style>
+			.topnav a.active {
+				background-color: rgb(71,71,71);
+				color: yellow;
+				transition: 0.3s
+			}
+			.topnav a.active:active {
+				transform: scale(0.9,0.9);
+				background-color: black;
+				color: white;
+			}
+		
+		</style>
+
 </head>
 <body>
 <style>
@@ -79,51 +99,35 @@
 }
 
 </style>
+	<style>
+		.holder {
+			border-radius: 10px;
+			background-color: rgb(100,100,100);
+			  transition:  0.3s;
+			width: 30%;
+			color: white;
+			box-shadow: 0px 0px 30px 2px rgba(100,100,100,1);
+			margin-top: 30px;
+			padding: 1px 1px 1px 1px;
+		}
+	</style>
 <div class="topnav">
   <a  href="index.html">About</a>
   <a  href="links.html">Links</a>
   <a class="active" href="channels2.html">Website Changelog</a>
-  <a style="color:yellow" href="#about">v1</a>
+  <a style="color:yellow" href="#about">v2</a>
 </div>
 <center>
 	<script src="https://9b3s1ksy5fcb.statuspage.io/embed/script.js"></script>
-<div style="padding-left:16px padding-right:16px" id="something">
-  <h1 style="color:white">CHANGELOG</h1>
-	<h4 style="color:yellow">v1.1 (bug fixes)</h4>
-	<p style="color:white">Fixed Icon</p>
-	<p style="color:white">Fixed buttons on links page (some of them arent used yet)</p>
-	<p style="color:white">The revamp is planned to start next week some time. The website will be closed during revamps.</p>
-	<h2 style="color:yellow">v1</h2>
-	<p style="color:red">The website has exited beta!</p>
-	<p style="color:blue">Since the website exited beta, expect it to show up on my channel soon.</p>
-	<p style="color:green">And also since i've been pushing this back, the website revamp will be happening soon!</p>
-	<p style="color:white"></p>
-	<h4 style="color:white">0.4BETA</h4>
-	<p style="color:white">Revamp paused, you can now access the site again</p>
-	<p style="color:white">More buttons</p>
-	<p style="color:white">Added a smooth transition to the topbar</p>
-	<p style="color:white">I hope to start the revamp again next year sometime.</p>
-	<p style="color:white">I dont feel like revamping right now, its too early.</p>
-  <h4 style="color:white">0.3.1BETA</h4>
-  <p style="color:white">Fixed some bugs.</p>
-  <p style="color:white">Added some funny to the links page</p>
-  <p style="color:white">Added my live streaming channel to the buttons on links</p>
-  <p style="color:white">Added a website Icon</p>
-  <p style="color:white">The about page will be updated next update</p>
-  <br>
-  <h4 style="color:white">0.3BETA</h4>
-  <p style="color:white">Website has entered beta stages</p>
-  <p style="color:white">Removed Secondary Channels and replaced it with this page</p>
-  <p style="color:white">Fixed bug with topbar</p>
-  <p style="color:white">About will be revamped next update</p>
-  <br>
-   <h4 style="color:white">0.2ALPHA</h4>
-  <p style="color:white">Microsoft Edge has been discontinued</p>
-  <p style="color:white">Internet explorer depricated</p>
-  <br>
-  <h4 style="color:white">0.1ALPHA</h4>
-  <p style="color:white">Website just created, enjoy!</p>
- 
+<div class="holder">
+	<h1>v2</h1>
+	<p>Welcome to the new changelog page!</p>
+	<p>Remade this page</p>
+	<p>Remade About</p>
+	<p>Completly remade links</p>
+	<p>This revamp took a total of 2 months, enjoy!</p>
+	<p>(This revamp was all made by nbur21)</p>
+	<p>// nbur21 //</p>
 </div>
 </center>
 </body>
